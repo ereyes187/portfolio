@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* .light {
+  --background: oklch(0.97 0 0);
+  --foreground: oklch(0.44 0 0);
+  --glass: oklch(0.27 0 0 / 0.05);
+  --surface: oklch(0.97 0 0);
+  --trim: oklch(0.27 0 0 / 0.3);
+  --highlight: oklch(0.27 0 0 / 0.15);
+  --action: oklch(0.2 0 0);
+
+  scrollbar-color: var(--action) transparent;
+} */
+
+.light {
+  --background: oklch(0.95 0.04 75);
+  --foreground: oklch(0.48 0.1 62);
+  --glass: oklch(0.29 0.06 54 / 0.05);
+  --surface: oklch(0.95 0.04 75);
+  --trim: oklch(0.29 0.06 54 / 0.3);
+  --highlight: oklch(0.29 0.06 54 / 0.15);
+  --action: oklch(0.29 0.06 54);
+
+  scrollbar-color: var(--action) transparent;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.72 0 0);
+  --glass: oklch(0.99 0 0 / 0.05);
+  --surface: oklch(0.2 0 0);
+  --trim: oklch(0.99 0 0 / 0.3);
+  --highlight: oklch(0.99 0 0 / 0.15);
+  --action: oklch(0.99 0 0);
+
+  scrollbar-color: var(--action) transparent;
+}
+
+[cmdk-group-heading] {
+  @apply text-sm px-2 pt-4 pb-2;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-glass: var(--glass);
+  --color-surface: var(--surface);
+  --color-trim: var(--trim);
+  --color-highlight: var(--highlight);
+  --color-action: var(--action);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
