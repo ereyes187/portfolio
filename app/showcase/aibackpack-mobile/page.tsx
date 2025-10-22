@@ -111,7 +111,7 @@ export default function AIBackpackMobile() {
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
             Video Demo
           </h2>
-          <video className="mt-2 w-3/4 p-2" controls>
+          <video className="mt-2 w-full md:w-3/4 p-2" controls>
             <source src="/aibackpack-mobile-demo.mp4" type="video/mp4" />
           </video>
         </section>

@@ -32,11 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${arimo.className}`}>
+      <body className={`${arimo.className} h-screen overflow-hidden`}>
         <ThemeProvider>
           <AuroraEffect>
-            <div className="flex flex-col md:max-w-4xl max-w-xl w-full max-h-[600px] h-full mx-auto rounded-lg bg-glass backdrop-blur-2xl border border-trim shadow-md">
-              <header className="flex flex-row justify-between items-center px-5 py-3 border-b border-trim">
+            <div className="flex flex-col md:max-w-4xl max-w-xl w-full h-[600px] mx-auto rounded-lg bg-glass backdrop-blur-2xl border border-trim shadow-md">
+              <header className="flex flex-row justify-between items-center px-5 py-3 border-b border-trim flex-shrink-0">
                 <div className="flex flex-row gap-x-3">
                   <div className="rounded-full w-3 h-3 bg-red-400" />
                   <div className="rounded-full w-3 h-3 bg-yellow-400" />
@@ -46,7 +46,7 @@ export default function RootLayout({
                   <ShortcutsButton />
                 </ShortcutsMenuProvider>
               </header>
-              {children}
+              <div className="flex-grow">{children}</div>
             </div>
             {/* <footer className="absolute bottom-2 text-center text-sm left-1/2 -translate-x-1/2 -translate-y-1/2">
               Copyright © 2025 Ernesto Reyes. All rights reserved.
