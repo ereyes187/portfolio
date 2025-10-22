@@ -46,7 +46,7 @@ export default function RootLayout({
                   <ShortcutsButton />
                 </ShortcutsMenuProvider>
               </header>
-              <div className="flex-grow">{children}</div>
+              <div className="flex-grow overflow-y-auto">{children}</div>
             </div>
             {/* <footer className="absolute bottom-2 text-center text-sm left-1/2 -translate-x-1/2 -translate-y-1/2">
               Copyright © 2025 Ernesto Reyes. All rights reserved.
