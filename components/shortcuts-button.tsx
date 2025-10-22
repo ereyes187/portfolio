@@ -10,7 +10,7 @@ export const ShortcutsButton = () => {
     <nav className="block">
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center gap-x-2 cursor-pointer hover:text-action transition-colors duration-200"
+        className="flex items-center gap-x-2 font-medium text-lg cursor-pointer hover:text-action transition-colors duration-200"
       >
         <LuCommand />
         Shortcuts

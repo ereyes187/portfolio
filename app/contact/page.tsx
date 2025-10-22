@@ -37,7 +37,7 @@ export default function Contact() {
   return (
     <main className="relative h-svh flex flex-col gap-y-8 p-6 overflow-y-auto">
       <div className="flex flex-col">
-        <h1 className="text-3xl md:text-4xl text-action scroll-m-20 font-bold tracking-tight first:mt-0">
+        <h1 className="text-2xl md:text-3xl text-action scroll-m-20 font-bold tracking-tight first:mt-0">
           Contact Me
         </h1>
         <p className="text-lg md:text-xl scroll-m-20 font-extralight tracking-tight first:mt-0">
@@ -100,7 +100,7 @@ export default function Contact() {
           <div className="col-span-12 flex gap-6 justify-end">
             <button
               type="submit"
-              className="group cursor-pointer px-6 py-3 flex flex-row justify-center items-center gap-2 bg-glass border border-trim rounded-lg hover:bg-highlight hover:text-action"
+              className="group cursor-pointer font-medium px-4 py-2 md:px-6 md:py-3 flex flex-row justify-center items-center gap-2 bg-glass border border-trim rounded-lg hover:bg-highlight hover:text-action"
             >
               Send Email
               <LuSend className="group-hover:translate-x-2 group-hover:translate-y-[-2px] transition duration-300" />

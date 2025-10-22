@@ -1,5 +1,6 @@
 interface AnimatedLinkProps {
-  direction: "left" | "right";
+  icon: React.ReactNode;
   href: string;
   text: string;
+  isExternal?: boolean;
 }

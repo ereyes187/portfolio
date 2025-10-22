@@ -6,7 +6,13 @@ export function useShowcaseItems(): ShowcaseItem[] {
       image: "/aibackpack-web.png",
       description:
         "An LLM-powered platform designed to help career seekers find opportunities tailored to their goals",
-      tags: ["Next.js", "Firebase", "Material UI", "Google Gemini API"],
+      tags: [
+        "Next.js",
+        "Firebase",
+        "Material UI",
+        "Figma",
+        "Google Gemini API",
+      ],
       link: "/showcase/aibackpack-web",
     },
     {
@@ -23,7 +29,7 @@ export function useShowcaseItems(): ShowcaseItem[] {
       title: "AI Backpack Mobile App",
       image: "/aibackpack-mobile.png",
       description:
-        "A mobile companion to the AI Backpack platform, built with a focus on networking and real-time messaging",
+        "My SWE capstone: the mobile companion to the AI Backpack platform, built with a focus on real-time messaging",
       tags: ["React Native", "Expo", "Firebase", "ChatKitty API"],
       link: "/showcase/aibackpack-mobile",
     },

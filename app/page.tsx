@@ -1,4 +1,5 @@
 import AnimatedLink from "@/components/animated-link";
+import { LuImages, LuSend } from "react-icons/lu";
 
 export default function Home() {
   return (
@@ -7,14 +8,14 @@ export default function Home() {
         <h1 className="text-4xl md:text-5xl text-center text-action scroll-m-20 font-extrabold tracking-tight text-balance">
           Ernesto Reyes
         </h1>
-        <h2 className="text-lg md:text-xl text-center scroll-m-20 font-semibold tracking-tight first:mt-0">
+        <h2 className="text-xl md:text-2xl text-center scroll-m-20 font-semibold tracking-tight first:mt-0">
           Software Engineer & Designer
         </h2>
         <div></div>
       </div>
       <div className="flex flex-row gap-x-6 justify-center">
-        <AnimatedLink direction="right" text="Showcase" href="/showcase" />
-        <AnimatedLink direction="right" text="Contact" href="/contact" />
+        <AnimatedLink icon={<LuImages />} text="Showcase" href="/showcase" />
+        <AnimatedLink icon={<LuSend />} text="Contact" href="/contact" />
       </div>
     </main>
   );
