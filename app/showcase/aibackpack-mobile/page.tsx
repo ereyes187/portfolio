@@ -12,7 +12,7 @@ export default function AIBackpackMobile() {
   ];
 
   return (
-    <main className="relative h-svh flex flex-col gap-y-8 p-6 overflow-y-scroll">
+    <main className="relative flex flex-col gap-y-8 p-6">
       <div className="flex flex-wrap items-center">
         <Link
           href="/showcase"

@@ -35,7 +35,7 @@ export default function Contact() {
   }
 
   return (
-    <main className="relative h-svh flex flex-col gap-y-8 p-6 overflow-y-auto">
+    <main className="relative flex flex-col gap-y-8 p-6">
       <div className="flex flex-col">
         <h1 className="text-2xl md:text-3xl text-action scroll-m-20 font-bold tracking-tight first:mt-0">
           Contact Me

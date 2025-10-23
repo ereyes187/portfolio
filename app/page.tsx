@@ -3,7 +3,7 @@ import { LuImages, LuSend } from "react-icons/lu";
 
 export default function Home() {
   return (
-    <main className="relative h-svh flex flex-col gap-y-12 justify-center items-center">
+    <main className="relative h-full flex flex-col gap-y-12 justify-center items-center">
       <div className="flex flex-col">
         <h1 className="text-4xl md:text-5xl text-center text-action scroll-m-20 font-extrabold tracking-tight text-balance">
           Ernesto Reyes
