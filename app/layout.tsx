@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${arimo.className} h-screen overflow-hidden`}>
+      <body className={`${arimo.className} h-screen`}>
         <ThemeProvider>
           <AuroraEffect>
             <div className="flex flex-col md:max-w-4xl max-w-xl w-full h-[600px] mx-auto rounded-lg bg-glass backdrop-blur-2xl border border-trim shadow-md">
