@@ -7,6 +7,10 @@ import { z } from "zod";
 import { formSchema } from "@/lib/schemas";
 import { sendEmail } from "@/lib/email";
 import { toast } from "sonner";
+import { WordBlur } from "@/components/animations/word-blur";
+import { Reveal } from "@/components/animations/reveal";
+import { ParagraphBlur } from "@/components/animations/paragraph-blur";
+import { Bubble } from "@/components/animations/bubble";
 
 export default function Contact() {
   const {
@@ -38,10 +42,13 @@ export default function Contact() {
     <main className="relative flex flex-col gap-y-8 p-6">
       <div className="flex flex-col">
         <h1 className="text-2xl md:text-3xl text-action scroll-m-20 font-bold tracking-tight first:mt-0">
-          Contact Me
+          <WordBlur text="Contact Me" />
         </h1>
         <p className="text-lg md:text-xl scroll-m-20 font-extralight tracking-tight first:mt-0">
-          Have a question, problem, or project? Let's talk
+          <ParagraphBlur
+            delay={0.2}
+            text="Have a question, problem, or project? Let's talk"
+          />
         </p>
       </div>
       <section aria-label="Contact Section">
@@ -50,33 +57,39 @@ export default function Contact() {
           className="grid grid-cols-12 gap-4 w-full"
         >
           <div className="md:col-span-4 col-span-12 row-start-1">
-            <input
-              {...register("name")}
-              className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
-              placeholder="Name"
-            />
+            <Bubble>
+              <input
+                {...register("name")}
+                className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
+                placeholder="Name"
+              />
+            </Bubble>
             {errors.name && (
               <p className="mt-2 text-sm text-action">{errors.name.message}</p>
             )}
           </div>
 
           <div className="md:col-span-4 col-span-12 row-start-2">
-            <input
-              {...register("email")}
-              className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
-              placeholder="Email address"
-            />
+            <Bubble>
+              <input
+                {...register("email")}
+                className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
+                placeholder="Email address"
+              />
+            </Bubble>
             {errors.email && (
               <p className="mt-2 text-sm text-action">{errors.email.message}</p>
             )}
           </div>
 
           <div className="md:col-span-4 col-span-12 row-start-3">
-            <input
-              {...register("subject")}
-              className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
-              placeholder="Subject"
-            />
+            <Bubble>
+              <input
+                {...register("subject")}
+                className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
+                placeholder="Subject"
+              />
+            </Bubble>
             {errors.subject && (
               <p className="mt-2 text-sm text-action">
                 {errors.subject.message}
@@ -85,11 +98,13 @@ export default function Contact() {
           </div>
 
           <div className="md:col-span-8 col-span-12 md:row-span-3 row-span-1">
-            <textarea
-              {...register("message")}
-              className="w-full h-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action resize-none"
-              placeholder="Your message"
-            />
+            <Bubble>
+              <textarea
+                {...register("message")}
+                className="w-full h-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action resize-none"
+                placeholder="Your message"
+              />
+            </Bubble>
             {errors.message && (
               <p className="mt-2 text-sm text-action">
                 {errors.message.message}
@@ -98,13 +113,15 @@ export default function Contact() {
           </div>
 
           <div className="col-span-12 flex gap-6 justify-end">
-            <button
-              type="submit"
-              className="group cursor-pointer font-medium px-4 py-2 md:px-6 md:py-3 flex flex-row justify-center items-center gap-2 bg-glass border border-trim rounded-lg hover:bg-highlight hover:text-action"
-            >
-              Send Email
-              <LuSend className="group-hover:translate-x-2 group-hover:translate-y-[-2px] transition duration-300" />
-            </button>
+            <Reveal delay={0.5}>
+              <button
+                type="submit"
+                className="group cursor-pointer font-medium px-4 py-2 md:px-6 md:py-3 flex flex-row justify-center items-center gap-2 bg-glass border border-trim rounded-lg hover:bg-highlight hover:text-action"
+              >
+                Send Email
+                <LuSend className="group-hover:translate-x-2 group-hover:translate-y-[-2px] transition duration-300" />
+              </button>
+            </Reveal>
           </div>
         </form>
       </section>
