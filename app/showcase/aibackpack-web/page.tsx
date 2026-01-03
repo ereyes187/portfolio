@@ -3,6 +3,9 @@ import { RiNextjsLine, RiFirebaseLine, RiGeminiLine } from "react-icons/ri";
 import { SiFigma, SiMui } from "react-icons/si";
 import { LuChevronRight, LuExternalLink } from "react-icons/lu";
 import AnimatedLink from "@/components/animated-link";
+import { WordBlur } from "@/components/animations/word-blur";
+import { Reveal } from "@/components/animations/reveal";
+import { ParagraphBlur } from "@/components/animations/paragraph-blur";
 
 export default function AIBackpackWeb() {
   const technologies = [
@@ -20,90 +23,115 @@ export default function AIBackpackWeb() {
           href="/showcase"
           className="peer text-2xl md:text-3xl font-bold scroll-m-20 tracking-tight first:mt-0 hover:text-action transition-colors duration-200"
         >
-          Showcase
+          <WordBlur text="Showcase" />
         </Link>
-        <LuChevronRight className="peer-hover:text-action transition-colors duration-200 text-3xl" />
+        <Reveal delay={0.3}>
+          <LuChevronRight className="peer-hover:text-action transition-colors duration-200 text-3xl" />
+        </Reveal>
         <h1 className="text-2xl md:text-3xl font-bold scroll-m-20 tracking-tight first:mt-0 text-action peer-hover:text-foreground transition-colors duration-200">
-          AI Backpack Web App
+          <WordBlur text="AI Backpack Web App" />
         </h1>
       </div>
-      <div className="flex flex-col gap-y-6">
+      <div className="flex flex-col gap-y-14">
         <section aria-label="Technology Used" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            Technologies Used
+            <WordBlur text="Technologies Used" />
           </h2>
           <ul
             className="flex flex-wrap gap-2 mt-2"
             aria-label="Technologies used"
           >
             {technologies.map(({ name, icon }) => (
-              <li
-                key={name}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg border border-trim pointer-events-none"
-              >
-                <span className="text-lg">{icon}</span>
-                <span className="text-md">{name}</span>
-              </li>
+              <Reveal delay={0.3} key={name}>
+                <li className="flex items-center gap-2 px-3 py-2 rounded-lg border border-trim pointer-events-none">
+                  <span className="text-lg">{icon}</span>
+                  <span className="text-md">{name}</span>
+                </li>
+              </Reveal>
             ))}
           </ul>
         </section>
 
         <section aria-label="Project Description" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            Project Description
+            <WordBlur text="Project Description" />
           </h2>
           <p className="text-md font-extralight mb-4 mt-2">
-            An LLM-powered platform designed to help career seekers find
-            opportunities tailored to their goals.
+            <ParagraphBlur
+              delay={0.3}
+              text="An LLM-powered platform designed to help career seekers find
+            opportunities tailored to their goals."
+            />
           </p>
           <p className="text-md font-extralight mb-4">
-            Paired with the SEAM™ Career Coach, created by Dr. Madeleine F.
+            <ParagraphBlur
+              delay={0.35}
+              text="Paired with the SEAM™ Career Coach, created by Dr. Madeleine F.
             Wallace, Ph.D, the AI Backpack is designed to support learners,
             students, and professionals in navigating their education-to-career
-            journey.
+            journey."
+            />
           </p>
           <p className="text-md font-extralight">
-            Beyond intelligent opportunity matching, users can find a community
+            <ParagraphBlur
+              delay={0.4}
+              text="Beyond intelligent opportunity matching, users can find a community
             space to connect with students, professors, professionals, mentors,
-            and leaders across tech and education.
+            and leaders across tech and education."
+            />
           </p>
         </section>
 
         <section aria-label="My Role" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            My Role
+            <WordBlur text="My Role" />
           </h2>
           <p className="text-md font-extralight mt-2">
-            As a Software Developer Intern, I truly wore every hat—from research
+            <ParagraphBlur
+              delay={0.3}
+              text="As a Software Developer Intern, I truly wore every hat—from research
             and UI/UX design to hands-on development and product
-            strategy—gaining a holistic understanding of the product lifecycle.
+            strategy—gaining a holistic understanding of the product lifecycle."
+            />
           </p>
         </section>
 
         <section aria-label="My Contributions" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            My Contributions
+            <WordBlur text="My Contributions" />
           </h2>
-          <ul className="ml-6 list-disc [&>li]:mt-2">
+          <ul className="ml-6 list-disc [&>li]:mt-4">
             <li>
-              Engineered a seamless migration of 50,000+ documents from NoSQL to
+              <ParagraphBlur
+                delay={0.3}
+                text="Engineered a seamless migration of 50,000+ documents from NoSQL to
               a relational SQL database, improving relational data handling,
               optimizing data accessibility, and reducing projected operational
-              costs by ∼50%.
+              costs by ∼50%."
+              />
             </li>
             <li>
-              Re-architected the codebase leveraging Next.js, leading to ∼35%
-              faster page load times and simplified component management.
+              <ParagraphBlur
+                delay={0.35}
+                text="Re-architected the codebase leveraging Next.js, leading to ∼35%
+              faster page load times and simplified component management."
+              />
             </li>
             <li>
-              Redesigned the frontend with Material-UI to deliver a responsive
+              <ParagraphBlur
+                delay={0.4}
+                text="Redesigned the frontend with Material-UI to deliver a responsive
               user interface, establishing a new and consistent company branding
-              standard.
+              standard."
+              />
             </li>
             <li>
-              Implemented advanced filtering logic and semantic search
+              <ParagraphBlur
+                delay={0.45}
+                text="Implemented advanced filtering logic and semantic search
               capabilities to improve relevance and accuracy of opportunity
-              search results.
+              search results."
+              />
             </li>
           </ul>
         </section>
@@ -112,12 +140,14 @@ export default function AIBackpackWeb() {
           aria-label="Project Links"
           className="flex flex-row justify-center"
         >
-          <AnimatedLink
-            icon={<LuExternalLink />}
-            text="Visit Website"
-            href="https://aibackpack.conectado.com/"
-            isExternal={true}
-          />
+          <Reveal delay={0.5}>
+            <AnimatedLink
+              icon={<LuExternalLink />}
+              text="Visit Website"
+              href="https://aibackpack.conectado.com/"
+              isExternal={true}
+            />
+          </Reveal>
         </section>
       </div>
     </main>

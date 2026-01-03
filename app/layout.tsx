@@ -7,6 +7,8 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import ShortcutsMenuProvider from "@/providers/shortcuts-provider";
 import { ShortcutsButton } from "@/components/shortcuts-button";
 import { Toaster } from "sonner";
+import { Reveal } from "@/components/animations/reveal";
+import { Bubble } from "@/components/animations/bubble";
 
 const arimo = Arimo({
   subsets: ["latin"],
