@@ -92,7 +92,7 @@ export default function AIAcademy() {
             <li>
               <ParagraphBlur
                 delay={0.3}
-                text="Designed and deliverd core curriculum modules with live hands-on demonstrations for 30+ business owners"
+                text="Designed and delivered core curriculum modules with live hands-on demonstrations for 30+ business owners"
               />
             </li>
             <li>
@@ -104,7 +104,7 @@ export default function AIAcademy() {
             <li>
               <ParagraphBlur
                 delay={0.4}
-                text="Demonstrated AI-assisted data analysis workflows that transformed raw business data into actionable insights within seconds enabling faster, data-driven decision-making."
+                text="Demonstrated AI-assisted data analysis workflows that transformed raw business data into actionable insights within seconds."
               />
             </li>
             <li>
