@@ -33,13 +33,49 @@ export default function AIBackpackWeb() {
         </h1>
       </div>
       <div className="flex flex-col gap-y-14">
-        <section aria-label="Technology Used" className="flex flex-col">
+        <section aria-label="Project Description" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            <WordBlur text="Technologies Used" />
+            <WordBlur text="Project Description" />
+          </h2>
+          <p className="text-md font-extralight mb-4 mt-2">
+            <ParagraphBlur
+              delay={0.3}
+              text="The AI Backpack Web App was built to address a growing gap between education and real-world career pathways—especially for students and early professionals who often lack personalized guidance and access to the right opportunities at the right time."
+            />
+          </p>
+          <p className="text-md font-extralight mb-4">
+            <ParagraphBlur
+              delay={0.35}
+              text="Developed at Conectado Inc. in collaboration with Dr. Madeleine F. Wallace, Ph.D., the project began with a simple question: How can AI support learners beyond static resources and generic advice? From that question emerged the AI Backpack—an LLM-powered platform designed to act as a career companion."
+            />
+          </p>
+          <p className="text-md font-extralight">
+            <ParagraphBlur
+              delay={0.4}
+              text="The AI Backpack pairs intelligent opportunity discovery with the SEAM™ Career Coach, helping users clarify goals, explore pathways, and receive recommendations tailored to their interests, background, and aspirations."
+            />
+          </p>
+        </section>
+
+        <section aria-label="My Role" className="flex flex-col">
+          <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
+            <WordBlur text="My Role" />
+          </h2>
+          <p className="text-md font-extralight mt-2">
+            <ParagraphBlur
+              delay={0.3}
+              text="As a Software Developer Intern, I truly wore every hat—from research and UI/UX design to hands-on development and product strategy—gaining a holistic understanding of the product lifecycle."
+            />
+          </p>
+        </section>
+
+        <section aria-label="Applied Technologies" className="flex flex-col">
+          <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
+            <WordBlur text="Applied Technologies" />
           </h2>
           <ul
             className="flex flex-wrap gap-2 mt-2"
-            aria-label="Technologies used"
+            aria-label="Applied Technologies"
           >
             {technologies.map(({ name, icon }) => (
               <Reveal delay={0.3} key={name}>
@@ -52,50 +88,6 @@ export default function AIBackpackWeb() {
           </ul>
         </section>
 
-        <section aria-label="Project Description" className="flex flex-col">
-          <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            <WordBlur text="Project Description" />
-          </h2>
-          <p className="text-md font-extralight mb-4 mt-2">
-            <ParagraphBlur
-              delay={0.3}
-              text="An LLM-powered platform designed to help career seekers find
-            opportunities tailored to their goals."
-            />
-          </p>
-          <p className="text-md font-extralight mb-4">
-            <ParagraphBlur
-              delay={0.35}
-              text="Paired with the SEAM™ Career Coach, created by Dr. Madeleine F.
-            Wallace, Ph.D, the AI Backpack is designed to support learners,
-            students, and professionals in navigating their education-to-career
-            journey."
-            />
-          </p>
-          <p className="text-md font-extralight">
-            <ParagraphBlur
-              delay={0.4}
-              text="Beyond intelligent opportunity matching, users can find a community
-            space to connect with students, professors, professionals, mentors,
-            and leaders across tech and education."
-            />
-          </p>
-        </section>
-
-        <section aria-label="My Role" className="flex flex-col">
-          <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            <WordBlur text="My Role" />
-          </h2>
-          <p className="text-md font-extralight mt-2">
-            <ParagraphBlur
-              delay={0.3}
-              text="As a Software Developer Intern, I truly wore every hat—from research
-            and UI/UX design to hands-on development and product
-            strategy—gaining a holistic understanding of the product lifecycle."
-            />
-          </p>
-        </section>
-
         <section aria-label="My Contributions" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
             <WordBlur text="My Contributions" />
@@ -104,33 +96,25 @@ export default function AIBackpackWeb() {
             <li>
               <ParagraphBlur
                 delay={0.3}
-                text="Engineered a seamless migration of 50,000+ documents from NoSQL to
-              a relational SQL database, improving relational data handling,
-              optimizing data accessibility, and reducing projected operational
-              costs by ∼50%."
+                text="Engineered a seamless migration of 50,000+ documents from NoSQL to a relational SQL database, improving relational data handling, optimizing data accessibility, and reducing projected operational costs by ∼50%."
               />
             </li>
             <li>
               <ParagraphBlur
                 delay={0.35}
-                text="Re-architected the codebase leveraging Next.js, leading to ∼35%
-              faster page load times and simplified component management."
+                text="Re-architected the codebase leveraging Next.js, leading to ∼35% faster page load times and simplified component management."
               />
             </li>
             <li>
               <ParagraphBlur
                 delay={0.4}
-                text="Redesigned the frontend with Material-UI to deliver a responsive
-              user interface, establishing a new and consistent company branding
-              standard."
+                text="Redesigned the frontend with Material-UI to deliver a responsive user interface, establishing a new and consistent company branding standard."
               />
             </li>
             <li>
               <ParagraphBlur
                 delay={0.45}
-                text="Implemented advanced filtering logic and semantic search
-              capabilities to improve relevance and accuracy of opportunity
-              search results."
+                text="Implemented advanced filtering logic and semantic search capabilities to improve relevance and accuracy of opportunity search results."
               />
             </li>
           </ul>

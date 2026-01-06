@@ -21,7 +21,6 @@ export const WordBlur = ({ text }: Props) => {
 
   return (
     <span ref={ref}>
-      <span className="sr-only">{text}</span>
       {words.map((word, index) => (
         <motion.span
           aria-hidden="true"

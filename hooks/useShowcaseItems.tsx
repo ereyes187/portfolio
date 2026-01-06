@@ -1,9 +1,18 @@
 export function useShowcaseItems(): ShowcaseItem[] {
   return [
     {
+      id: "Conectado-Bootcamp",
+      title: "AI Academy for Business",
+      image: "/ai-academy.png",
+      description:
+        "Teaching curriculum designed to help entrepeneurs discover how artificial intelligence can enhance day-to-day business operations",
+      tags: ["Qlik Sense", "Google Gemini", "Zapier", "Relay.app", "Notion AI"],
+      link: "/showcase/ai-academy",
+    },
+    {
       id: "Conectado-Web",
       title: "AI Backpack Web App",
-      image: "/aibackpack-web.png",
+      image: "/ai-backpack-web.png",
       description:
         "An LLM-powered platform designed to help career seekers find opportunities tailored to their goals",
       tags: [
@@ -13,7 +22,7 @@ export function useShowcaseItems(): ShowcaseItem[] {
         "Figma",
         "Google Gemini API",
       ],
-      link: "/showcase/aibackpack-web",
+      link: "/showcase/ai-backpack-web",
     },
     {
       id: "Vini",
@@ -27,11 +36,11 @@ export function useShowcaseItems(): ShowcaseItem[] {
     {
       id: "Conectado-Mobile",
       title: "AI Backpack Mobile App",
-      image: "/aibackpack-mobile.png",
+      image: "/ai-backpack-mobile.png",
       description:
         "My SWE capstone: the mobile companion to the AI Backpack platform, built with a focus on real-time messaging",
       tags: ["React Native", "Expo", "Firebase", "ChatKitty API"],
-      link: "/showcase/aibackpack-mobile",
+      link: "/showcase/ai-backpack-mobile",
     },
   ];
 }

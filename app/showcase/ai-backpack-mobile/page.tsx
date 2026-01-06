@@ -32,25 +32,6 @@ export default function AIBackpackMobile() {
         </h1>
       </div>
       <div className="flex flex-col gap-y-14">
-        <section aria-label="Technology Used" className="flex flex-col">
-          <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            <WordBlur text="Technologies Used" />
-          </h2>
-          <ul
-            className="flex flex-wrap gap-2 mt-2"
-            aria-label="Technologies used"
-          >
-            {technologies.map(({ name, icon }) => (
-              <Reveal delay={0.3} key={name}>
-                <li className="flex items-center gap-2 px-3 py-2 rounded-lg border border-trim pointer-events-none">
-                  <span className="text-lg">{icon}</span>
-                  <span className="text-md">{name}</span>
-                </li>
-              </Reveal>
-            ))}
-          </ul>
-        </section>
-
         <section aria-label="Project Description" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
             <WordBlur text="Project Description" />
@@ -58,26 +39,19 @@ export default function AIBackpackMobile() {
           <p className="text-md font-extralight mb-4 mt-2">
             <ParagraphBlur
               delay={0.3}
-              text="My SWE capstone: the mobile companion to the AI Backpack platform,
-            built with a focus on real-time messaging"
+              text="The AI Backpack Mobile App was my Software Engineering capstone and served as the first implementation of the AI Backpack concept. The goal was to tackle a common problem faced by students and early professionals: career resources are scattered across platforms, making it difficult to discover opportunities and build meaningful connections in one place."
             />
           </p>
           <p className="text-md font-extralight mb-4">
             <ParagraphBlur
               delay={0.35}
-              text="This capstone project was developed to address the widespread issue
-            of fragmented career resources by unifying them into one cohesive
-            mobile experience."
+              text="Designed as a mobile-first experience, the app centralizes scholarships, internships, and career pathways into a single, searchable interface that users can access anytime."
             />
           </p>
           <p className="text-md font-extralight">
             <ParagraphBlur
               delay={0.4}
-              text="The AI Backpack Mobile App centralizes scholarships, internships,
-            and other career pathways into a seamless, searchable interface. Its
-            real-time messaging feature serves as the foundation for meaningful
-            peer-to-peer networking, enabling users to share insights and build
-            professional relationships."
+              text="The most significant technical challenge was implementing a real-time messaging system under a short three-to-four month development window. Building a production-ready chat solution—supporting both direct messaging and group conversations—typically requires several months of development, careful backend architecture, and extensive testing. Within this short timeframe, my team and I delivered a reliable live chat experience using the ChatKitty API, enabling real-time communication and peer-to-peer networking at scale."
             />
           </p>
         </section>
@@ -97,6 +71,25 @@ export default function AIBackpackMobile() {
           </p>
         </section>
 
+        <section aria-label="Applied Technologies" className="flex flex-col">
+          <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
+            <WordBlur text="Applied Technologies" />
+          </h2>
+          <ul
+            className="flex flex-wrap gap-2 mt-2"
+            aria-label="Applied Technologies"
+          >
+            {technologies.map(({ name, icon }) => (
+              <Reveal delay={0.3} key={name}>
+                <li className="flex items-center gap-2 px-3 py-2 rounded-lg border border-trim pointer-events-none">
+                  <span className="text-lg">{icon}</span>
+                  <span className="text-md">{name}</span>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </section>
+
         <section aria-label="My Contributions" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
             <WordBlur text="My Contributions" />
@@ -107,7 +100,7 @@ export default function AIBackpackMobile() {
                 delay={0.3}
                 text="Engineered a scalable chat solution using the ChatKitty API,
               accelerating delivery by ∼70% while lowering costs by 2-5x
-              compared to competing APIs"
+              compared to competing APIs."
               />
             </li>
             <li>
@@ -142,7 +135,7 @@ export default function AIBackpackMobile() {
           </h2>
           <Bubble>
             <video className="mt-2 w-full md:w-3/4 p-2" controls>
-              <source src="/aibackpack-mobile-demo.mp4" type="video/mp4" />
+              <source src="/ai-backpack-mobile-demo.mp4" type="video/mp4" />
             </video>
           </Bubble>
         </section>
