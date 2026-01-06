@@ -11,25 +11,24 @@ interface Props {
 
 export const Reveal = ({ children, width = "fit-content", delay }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const mainControls = useAnimation();
+  // const isInView = useInView(ref, { once: true });
+  // const mainControls = useAnimation();
 
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView]);
+  // useEffect(() => {
+  //   if (isInView) {
+  //     mainControls.start("visible");
+  //   }
+  // }, [isInView]);
 
   return (
     <div ref={ref} className="relative" style={{ width: width }}>
       <motion.div
-        variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: delay }}
+        style={{ width }}
+        className="relative"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, delay }}
       >
         {children}
       </motion.div>
