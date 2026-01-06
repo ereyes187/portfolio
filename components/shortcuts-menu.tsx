@@ -60,7 +60,7 @@ export default function ShortcutsMenu() {
             <div className="flex flex-row items-center gap-x-2 text-lg p-4 border-b border-trim">
               <LuSearch />
               <Command.Input
-                autoFocus
+                // autoFocus
                 placeholder="Search..."
                 className="w-full bg-transparent outline-none placeholder:text-foreground/50"
               />
