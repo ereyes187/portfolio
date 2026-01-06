@@ -21,7 +21,6 @@ export const ParagraphBlur = ({ text, delay }: Props) => {
 
   return (
     <span ref={ref}>
-      <span className="sr-only">{text}</span>
       <motion.span
         aria-hidden="true"
         className="inline-block align-top mr-1.5"

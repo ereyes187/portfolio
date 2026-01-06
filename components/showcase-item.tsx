@@ -25,7 +25,7 @@ export default function ShowcaseItem(project: ShowcaseItem) {
           <div className="md:col-span-7 col-span-12 place-content-center">
             <h2 className="flex gap-1 items-center scroll-m-20 text-lg font-semibold tracking-tight group-hover:text-action">
               <WordBlur text={project.title} />
-              <Reveal delay={0.4}>
+              <Reveal delay={0.5}>
                 <LuArrowRight className="group-hover:translate-x-2 duration-200" />
               </Reveal>
             </h2>
@@ -38,7 +38,7 @@ export default function ShowcaseItem(project: ShowcaseItem) {
               aria-label="Technologies used"
             >
               {project.tags.map((tag) => (
-                <Reveal delay={1} key={tag}>
+                <Reveal delay={0.7} key={tag}>
                   <li className="px-2 py-1 text-xs rounded-lg border border-trim">
                     {tag}
                   </li>

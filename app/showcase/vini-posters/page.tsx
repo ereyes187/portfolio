@@ -32,13 +32,37 @@ export default function ViniPosters() {
         </h1>
       </div>
       <div className="flex flex-col gap-y-14">
-        <section aria-label="Technology Used" className="flex flex-col">
+        <section aria-label="Project Description" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            <WordBlur text="Technologies Used" />
+            <WordBlur text="Project Description" />
+          </h2>
+          <p className="text-md font-extralight mb-4 mt-2">
+            <ParagraphBlur
+              delay={0.3}
+              text="Vini Posters began as a personal creative experiment—designing album posters for my bedroom using Canva as a way to celebrate the music I love. While the results were visually satisfying, the process itself was repetitive, which sparked a simple idea: why not automate it?"
+            />
+          </p>
+          <p className="text-md font-extralight mb-4">
+            <ParagraphBlur
+              delay={0.35}
+              text="That idea led to the development of Vini Posters, a full-stack web application that transforms album artwork into beautifully designed posters with a single click. By leveraging the Spotify Web API, users can search for their favorite albums and instantly generate stylized poster layouts using album images and metadata."
+            />
+          </p>
+          <p>
+            <ParagraphBlur
+              delay={0.4}
+              text="What started as a personal design hobby evolved into a creative automation tool—combining music, design, and engineering to turn inspiration into a seamless, repeatable experience."
+            />
+          </p>
+        </section>
+
+        <section aria-label="Applied Technologies" className="flex flex-col">
+          <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
+            <WordBlur text="Applied Technologies" />
           </h2>
           <ul
             className="flex flex-wrap gap-2 mt-2"
-            aria-label="Technologies used"
+            aria-label="Applied Technologies"
           >
             {technologies.map(({ name, icon }) => (
               <Reveal delay={0.3} key={name}>
@@ -51,35 +75,6 @@ export default function ViniPosters() {
           </ul>
         </section>
 
-        <section aria-label="Project Description" className="flex flex-col">
-          <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
-            <WordBlur text="Project Description" />
-          </h2>
-          <p className="text-md font-extralight mb-4 mt-2">
-            <ParagraphBlur
-              delay={0.3}
-              text="Creative tool that transforms your favorite album covers into
-            beautiful poster designs."
-            />
-          </p>
-          <p className="text-md font-extralight mb-4">
-            <ParagraphBlur
-              delay={0.35}
-              text="Originally inspired by posters that I designed for some of my
-            favorite music using Canva, Vini Posters is a full-stack web
-            application that automates the design process. layout."
-            />
-          </p>
-          <p>
-            <ParagraphBlur
-              delay={0.4}
-              text="Leveraging the Spotify Web API for efficient data retrieval of album
-            images and metadata, album information is seamlessly formatted into
-            a stylistic poster"
-            />
-          </p>
-        </section>
-
         <section aria-label="Key Features" className="flex flex-col">
           <h2 className="text-lg md:text-xl scroll-m-20 font-medium tracking-tight first:mt-0 text-action">
             <WordBlur text="Key Features" />
@@ -88,23 +83,25 @@ export default function ViniPosters() {
             <li>
               <ParagraphBlur
                 delay={0.3}
-                text="A modern and fully responsive design utilizing Vue.js and Tailwind
-              CSS"
+                text="Responsive, design-first UI built with Vue.js and Tailwind CSS, delivering a clean, modern experience across devices."
               />
             </li>
             <li>
               <ParagraphBlur
                 delay={0.35}
-                text="Robust back-end logic using Express.js to efficiently manage and
-              route asynchronous requests to the Spotify Web API, ensuring fast
-              and reliable data fetching."
+                text="Scalable backend architecture powered by Express.js to handle asynchronous requests to the Spotify Web API with speed and reliability."
               />
             </li>
             <li>
               <ParagraphBlur
                 delay={0.4}
-                text="Dynamic generation of poster designs using selected album data,
-              ensuring visual consistency across all outputs."
+                text="One-click poster generation, dynamically transforming album artwork and metadata into visually consistent, polished poster designs."
+              />
+            </li>
+            <li>
+              <ParagraphBlur
+                delay={0.45}
+                text="Seamless data-to-design pipeline, ensuring every generated poster maintains layout balance, typography consistency, and visual cohesion."
               />
             </li>
           </ul>
