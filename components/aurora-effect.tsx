@@ -32,7 +32,7 @@ export const AuroraEffect = ({ children }: AuroraEffectProps) => {
       style={{
         backgroundImage: bgImage,
       }}
-      className="min-h-screen overflow-hidden px-4 place-content-center"
+      className="h-screen overflow-hidden px-4 place-content-center"
     >
       {children}
     </motion.section>

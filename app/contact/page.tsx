@@ -63,10 +63,12 @@ export default function Contact() {
                 className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
                 placeholder="Name"
               />
+              {errors.name && (
+                <p className="mt-2 text-sm text-action">
+                  {errors.name.message}
+                </p>
+              )}
             </Bubble>
-            {errors.name && (
-              <p className="mt-2 text-sm text-action">{errors.name.message}</p>
-            )}
           </div>
 
           <div className="md:col-span-4 col-span-12 row-start-2">
@@ -76,10 +78,12 @@ export default function Contact() {
                 className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
                 placeholder="Email address"
               />
+              {errors.email && (
+                <p className="mt-2 text-sm text-action">
+                  {errors.email.message}
+                </p>
+              )}
             </Bubble>
-            {errors.email && (
-              <p className="mt-2 text-sm text-action">{errors.email.message}</p>
-            )}
           </div>
 
           <div className="md:col-span-4 col-span-12 row-start-3">
@@ -89,12 +93,12 @@ export default function Contact() {
                 className="w-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action"
                 placeholder="Subject"
               />
+              {errors.subject && (
+                <p className="mt-2 text-sm text-action">
+                  {errors.subject.message}
+                </p>
+              )}
             </Bubble>
-            {errors.subject && (
-              <p className="mt-2 text-sm text-action">
-                {errors.subject.message}
-              </p>
-            )}
           </div>
 
           <div className="md:col-span-8 col-span-12 md:row-span-3 row-span-1">
@@ -104,12 +108,12 @@ export default function Contact() {
                 className="w-full h-full px-4 py-4 bg-glass rounded-lg border border-trim focus:outline-none focus:ring-1 focus:ring-action resize-none"
                 placeholder="Your message"
               />
+              {errors.message && (
+                <p className="mt-2 text-sm text-action">
+                  {errors.message.message}
+                </p>
+              )}
             </Bubble>
-            {errors.message && (
-              <p className="mt-2 text-sm text-action">
-                {errors.message.message}
-              </p>
-            )}
           </div>
 
           <div className="col-span-12 flex gap-6 justify-end">
